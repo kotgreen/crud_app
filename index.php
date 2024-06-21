@@ -12,6 +12,8 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Age</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -32,6 +34,8 @@
                     <td><?= $row['first_name']; ?></td>
                     <td><?= $row['last_name']; ?></td>
                     <td><?= $row['age']; ?></td>
+                    <td><a href="update_page_1.php?id=<?= $row['id']; ?>" class="btn btn-success">Update</a></td>
+                    <td><a href="delete_page.php?id=<?= $row['id']; ?>" class="btn btn-danger">Delete</a></td>
                 </tr>
         <?php
             }
@@ -45,6 +49,14 @@
 
 if(isset($_GET['message'])) {
     echo "<h6>" . $_GET['message'] . "</h6>";
+}
+
+?>
+
+<?php
+
+if(isset($_GET['insert_msg'])) {
+    echo "<h6>" . $_GET['insert_msg'] . "</h6>";
 }
 
 ?>
