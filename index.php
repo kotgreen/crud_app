@@ -61,6 +61,22 @@ if(isset($_GET['insert_msg'])) {
 
 ?>
 
+<?php
+
+if(isset($_GET['update_msg'])) {
+    echo "<h6>" . $_GET['update_msg'] . "</h6>";
+}
+
+?>
+
+<?php
+
+if(isset($_GET['delete_msg'])) {
+    echo "<h6>" . $_GET['delete_msg'] . "</h6>";
+}
+
+?>
+
 <!-- Modal -->
 <form action="insert_data.php" method="POST">
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -71,6 +87,7 @@ if(isset($_GET['insert_msg'])) {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+
                     <div class="form-group">
                         <label for="f_name">First Name</label>
                         <input type="text" name="f_name" class="form-control">
@@ -83,6 +100,7 @@ if(isset($_GET['insert_msg'])) {
                         <label for="age">Age</label>
                         <input type="text" name="age" class="form-control">
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
